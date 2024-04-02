@@ -1,4 +1,6 @@
 <script>
+import { RouterLink } from 'vue-router';
+
 export default {
     name: 'AppHeader'
 }
@@ -18,7 +20,7 @@ export default {
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <RouterLink :to="{ name: 'home' }">Home</RouterLink>
                         </li>
                     </ul>
                 </div>

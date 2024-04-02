@@ -3,21 +3,22 @@ import axios from 'axios';
 import ProjectCard from '../ProjectCard.vue';
 const endpoint = 'http://127.0.0.1:8000/api/projects/';
 export default {
-    name: 'AppHome',
+    name: 'project-detail',
     components: { ProjectCard },
+
     data: () => ({
-        projects: []
+        project: null
 
     }),
     methods: {
-        fetchProjects() {
-            axios.get(endpoint).then(res => {
-                this.projects = res.data
+        getProject() {
+            axios.get(endpoint + this.$route.params.id).then(res => {
+                this.project = res.data
             })
         }
     },
     created() {
-        this.fetchProjects();
+        this.getProject();
     }
 }
 </script>
@@ -25,9 +26,7 @@ export default {
 
 
 <template>
-    <div class="container">
-        <ProjectCard v-for="project in projects" :project="project" />
-    </div>
+    <ProjectCard :project="project" />
 </template>
 
 
