@@ -26,7 +26,7 @@ export default {
 
 
 <template>
-    <ProjectCard :project="project" />
+    <ProjectCard :project="project" :isDetail="true" />
 </template>
 
 
