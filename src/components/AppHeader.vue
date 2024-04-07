@@ -1,6 +1,7 @@
 <script>
 import { RouterLink } from 'vue-router';
 
+
 export default {
     name: 'AppHeader'
 }
@@ -17,10 +18,15 @@ export default {
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse gap-3" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <RouterLink :to="{ name: 'home' }">Home</RouterLink>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <RouterLink :to="{ name: 'contact-us' }">Contattaci</RouterLink>
                         </li>
                     </ul>
                 </div>

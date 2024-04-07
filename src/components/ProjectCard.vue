@@ -20,12 +20,12 @@ export default {
                     </RouterLink>
                 </div>
                 <p class="card-text">{{ project.content }}</p>
-                <div class="d-flex justify-content-between">
-                    <span>{{ project.type['label'] }}</span>
+                <!-- <div class="d-flex justify-content-between">
+                   <span>{{ project.type['label'] }}</span>
                     <div class="d-flex gap-2">
                         <span v-for="technology in project.technologies">{{ technology['label'] }} </span>
                     </div>
-                </div>
+                </div>-->
 
             </div>
 
